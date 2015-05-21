@@ -1,0 +1,154 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+label {
+	display: inline-block;
+}
+
+#main {
+	height: 100%;
+}
+
+#members-wrap {
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#room-name,#nick-name {
+	width: 200px;
+	display: inline-block;
+}
+
+.hide {
+	display: none !important;
+}
+
+#loader {
+	position: fixed;
+	top: 200px;
+	left: 50%;
+}
+#members-list-wrap {
+	margin-top: 30px;
+}
+
+#member-list {
+	margin-top: 10px;
+	margin-left: 0;
+}
+
+.member {
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+.nick-name {
+	width: 200px;
+	border: 1px solid;
+	height: 40px;
+	padding-top: 5px;
+	padding-left: 10px;		
+	display: inline-block;
+}
+
+.call-type {
+	cursor: pointer;
+	margin-left: 10px;
+	display: inline-block;	
+}
+
+#reject-call {
+	margin-left: 10px;
+}
+
+#text-wrap {
+	position: absolute;
+	bottom: 0;
+}
+
+#chat-wrap {
+	height: 400px;
+	width: 300px;
+	border: 1px solid;
+}
+
+#post-chat-text {
+	position: relative;
+	bottom: 0;
+	height: 60%;
+	resize:none;
+}
+
+.chats {
+	height: 70%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.post-chat-wrap {
+	height: 30%;
+}
+
+#post-chat-button {
+	float: right;
+	margin-right: 14px;
+	margin-bottom: 0px;
+	position: relative;
+	top: -5px;
+}
+
+.chats > p {
+	margin-bottom: 5px;
+}
+
+.call-type-container {
+	display: inline-block;
+}
+
+#media-modal,#confirm-modal {
+	width: 75%;
+	max-width: 750px;
+	min-height: 100px !important; 
+}
+
+#their-name {
+	margin-top: 30px;
+}
+
+#video-call-buttons {
+	margin-top: 20px;
+}
+
+.chatter-name {
+	text-transform: capitalize;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.error-text {
+	color :#F44336;
+}
+@media only screen and (max-width: 40em) {
+	dialog, .reveal-modal {
+	  margin-left: 30px;
+	  margin-top: 100px;
+	}	
+}
+
+@media only screen and (max-width: 560px) {
+	.call-type-container {
+		margin-top: 5px;
+	}
+
+	.first-type {
+		margin-left: 3px;
+	}
+
+	.member {
+		margin-top: 35px;
+	}
+
+}

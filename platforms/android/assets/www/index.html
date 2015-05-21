@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<title>WebRTC</title>
+	<link rel="stylesheet" href="vendor/foundation/css/foundation.css" />
+	<link rel="stylesheet" href="stylesheets/style.css" />
+	<script src="vendor/socket/socket.io.js"></script>
+    <script src="vendor/modernizr/modernizr.js"></script>
+    <script src="js/opentok.min.js"></script>
+</head>
+
+<body>
+
+	<div id="main">
+		
+		<div id="index">
+			
+			<label for="nick-name">Enter your username</label> <input type="text" id="nick-name"> <br>
+			<a href="#" id="enter-room" class="button tiny"> Enter </a>
+
+			<br>
+			<span class="error-text"></span>
+
+		</div>
+
+		<div id="members-wrap" class="hide">
+
+			<h3 id="basic-info">Hi <span id="my-nick-name"></span></h3>
+			
+			<p id="no-members"> Waiting for other members to join</p>
+
+			<div id="members-list-wrap">
+
+				People who are online...	
+				
+				<ul id="member-list">
+					
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div id="media" class="hide">
+
+			<div id="video-div" class="hide">
+
+				<div id="video-call">
+					
+					<div id="video-container">
+						
+						<div id="my-name" class="chatter-name"> Me </div>
+						<div id="my-video-wrap">
+							<div id="my-video"></div>
+						</div>
+
+						<div id="their-name" class="chatter-name"></div>
+						<div id="their-video-wrap">
+							<div id="their-video"></div>
+						</div>
+
+					</div>
+					
+
+					<div id="video-call-buttons" class="hide">
+						<a href="#" id="start-video-recording" class="button tiny"> Start Recording </a>
+						<a href="#" id="stop-video-recording" class="button tiny hide"> Stop Recording </a>
+						<a href="#" id="end-call" class="button tiny"> End Call </a>
+					</div>
+
+					<div id="video-loading" class="hide">
+						<img src="images/loading.gif" alt="loading">
+					</div>
+
+				</div>
+
+				<div id="video-history-wrap" class="hide">
+					
+					<video id="video-history" controls style="width:778px;height:576px;"></video>
+					<div><a href="#" id="return-menu"> Return to Main Menu </a></div>
+
+				</div>
+
+			</div>
+
+			<div id="audio-wrap" class="hide">
+
+				<div id="audio-call">
+					<div id="my-audio"></div>
+					<div id="their-audio"></div>
+
+					<a href="#" id="end-call" class="button tiny"> End Call </a>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="text-wrap" class="hide">
+	
+			<a href="#" id="end-chat" class="tiny button">End Chat</a>	
+
+			<div id="chat-wrap">
+				<div class="chats"></div>
+				<div class="post-chat-wrap">
+					<textarea id="post-chat-text"></textarea>
+					<a href="#" id="post-chat-button" class="tiny button">Post</a>
+				</div>	
+			</div>
+		</div>
+
+		<img src="images/loader.gif" alt="" class="hide" id="loader"/>
+		<div id="subscriberMeter"></div>
+	</div>
+
+	<div id="media-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	  	
+	</div>
+
+	<div id="confirm-modal" data-options="close_on_background_click:false;close_on_esc:false;" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	  	
+	</div>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" data-main="js/main" src="vendor/require/require.js"></script>
+
+</body>
+</html>
